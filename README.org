@@ -12,7 +12,9 @@
    Una *stringa modulare* è, dal punto di vista informatico, una lista di numeri interi non infinita e circolare. Questo vuol dire che l'elemento successivo all'ultimo è il primo, e il suo precedente è l'ultimo. In Haskell, è possibile gestire questa struttura con una lista normale, usando delle funzioni speciali per operarla.
 
 *** Evoluzione della stringa
-    La funzione principale che solleva diverse congetture, è l'/evoluzione/ di una stringa modulare. E' definita dalla funzione matematica \((s_i) = (s_i + s_{i+1}) \text{ `mod` length}(s).\)
+    La funzione principale che solleva diverse congetture, è l'/evoluzione/ di una stringa modulare. E' definita dalla funzione matematica
+
+    [[[[https://render.githubusercontent.com/render/math?math=]](s_i)=(s_i%2Bs_{i+1})\text{%20`mod`%20xlength}(s)]]
     #+begin_quote
     /La funzione `mod` è stata usata in maniera infissa, seguendo lo stile sintattico di Haskell./
     #+end_quote
