@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-27 lun 20:06 -->
+<!-- 2022-06-27 lun 22:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Modular Strings</title>
@@ -245,34 +245,34 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org46b07a5">1. ModularStrings.hs</a>
+<li><a href="#org63a46c9">1. ModularStrings.hs</a>
 <ul>
-<li><a href="#org1213972">1.1. Descrizione</a>
+<li><a href="#orgcb4e833">1.1. Descrizione</a>
 <ul>
-<li><a href="#org1cc7a8f">1.1.1. Evoluzione della stringa</a></li>
-<li><a href="#org4f5e12d">1.1.2. Tipi di stringhe</a></li>
+<li><a href="#orgf81fab5">1.1.1. Evoluzione della stringa</a></li>
+<li><a href="#orgf8ca2fb">1.1.2. Tipi di stringhe</a></li>
 </ul>
 </li>
-<li><a href="#org1df00dd">1.2. Congetture</a></li>
+<li><a href="#org6695458">1.2. Congetture</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org46b07a5" class="outline-2">
-<h2 id="org46b07a5"><span class="section-number-2">1</span> ModularStrings.hs</h2>
+<div id="outline-container-org63a46c9" class="outline-2">
+<h2 id="org63a46c9"><span class="section-number-2">1</span> ModularStrings.hs</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <code>ModularStrings.hs</code> è un'insieme di funzioni Haskell che consentono la computazione di una stringa modulare. L'esecuzione del programma avviene con l'avvio di software compilato, accessibile nella voce <code>Releases</code> di questa pagina. Altrimenti, è possibile eseguire il software messo a disposizione scaricando i sorgenti ed eseguendo da linea di comando
 </p>
 <div class="org-src-container">
-<pre class="src src-Bash" id="org0263c06">ghci ModularString.hs
+<pre class="src src-Bash" id="org3dd1ac2">ghci ModularString.hs
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org1213972" class="outline-3">
-<h3 id="org1213972"><span class="section-number-3">1.1</span> Descrizione</h3>
+<div id="outline-container-orgcb4e833" class="outline-3">
+<h3 id="orgcb4e833"><span class="section-number-3">1.1</span> Descrizione</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Il concetto di stringa modulare è stato definito dal mio insegnante di matematica Riccardo Pratesi. Di seguito, descrivo brevemente le nozioni di base necessarie per comprendere a chi legge (e a me!) il problema.
@@ -283,8 +283,8 @@ Una <b>stringa modulare</b> è, dal punto di vista informatico, una lista di num
 </p>
 </div>
 
-<div id="outline-container-org1cc7a8f" class="outline-4">
-<h4 id="org1cc7a8f"><span class="section-number-4">1.1.1</span> Evoluzione della stringa</h4>
+<div id="outline-container-orgf81fab5" class="outline-4">
+<h4 id="orgf81fab5"><span class="section-number-4">1.1.1</span> Evoluzione della stringa</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 La funzione principale che solleva diverse congetture, è l'<i>evoluzione</i> di una stringa modulare. E' definita dalla funzione matematica
@@ -304,18 +304,16 @@ Una stringa è quindi circolare, le operazioni da svolgere su di essa possono se
 </div>
 </div>
 
-<div id="outline-container-org4f5e12d" class="outline-4">
-<h4 id="org4f5e12d"><span class="section-number-4">1.1.2</span> Tipi di stringhe</h4>
+<div id="outline-container-orgf8ca2fb" class="outline-4">
+<h4 id="orgf8ca2fb"><span class="section-number-4">1.1.2</span> Tipi di stringhe</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 Il numero di tutte le stringhe possibili data la loro lunghezza come numero intero positivo, è definita dalla formula della disposizione ripetuta:
 </p>
-
-    \begin{eq}
+\begin{equation}
 n^n.
-    \end{eq}
+\end{equation}
 <p>
-x
 Tuttavia, esistono particolari tipi di stringhe alle quali sembra importante attribuirgli una definizione nota:
 </p>
 <ul class="org-ul">
@@ -340,14 +338,14 @@ primordiale n = take n-1 $ repeat 0 ++ 1
 </div>
 </div>
 </div>
-<div id="outline-container-org1df00dd" class="outline-3">
-<h3 id="org1df00dd"><span class="section-number-3">1.2</span> Congetture</h3>
+<div id="outline-container-org6695458" class="outline-3">
+<h3 id="org6695458"><span class="section-number-3">1.2</span> Congetture</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Francesco</p>
-<p class="date">Created: 2022-06-27 lun 20:06</p>
+<p class="date">Created: 2022-06-27 lun 22:04</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
