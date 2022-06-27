@@ -1,0 +1,45 @@
+#+TITLE: Modular Strings
+* ModularStrings.hs
+  ~ModularStrings.hs~ è un'insieme di funzioni Haskell che consentono la computazione di una stringa modulare. L'esecuzione del programma avviene con l'avvio di software compilato, accessibile nella voce ~Releases~ di questa pagina. Altrimenti, è possibile eseguire il software messo a disposizione scaricando i sorgenti ed eseguendo da linea di comando
+  #+NAME: exec
+  #+BEGIN_SRC Bash
+  ghci ModularString.hs
+  #+END_SRC
+  
+** Descrizione
+   Il concetto di stringa modulare è stato definito dal mio insegnante di matematica Riccardo Pratesi. Di seguito, descrivo brevemente le nozioni di base necessarie per comprendere a chi legge (e a me!) il problema.
+  
+   Una *stringa modulare* è, dal punto di vista informatico, una lista di numeri interi non infinita e circolare. Questo vuol dire che l'elemento successivo all'ultimo è il primo, e il suo precedente è l'ultimo. In Haskell, è possibile gestire questa struttura con una lista normale, usando delle funzioni speciali per operarla.
+
+*** Evoluzione della stringa
+    La funzione principale che solleva diverse congetture, è l'/evoluzione/ di una stringa modulare. E' definita dalla funzione matematica
+    \begin{equation}
+    e(s_i) = (s_i + s_{i+1}) \text{ `mod` length}(s).
+    \end{equation}
+    #+begin_quote
+    /La funzione `mod` è stata usata in maniera infissa, seguendo lo stile sintattico di Haskell./
+    #+end_quote
+    
+Una stringa è quindi circolare, le operazioni da svolgere su di essa possono seguire dei /pattern/ periodici precisi. Il numero di passaggi che intercorrono tra una stringa e il ripetersi della stessa è chiamato periodo, e viene indicato con la lettera T maiuscola.
+
+*** Tipi di stringhe
+    Il numero di tutte le stringhe possibili data la loro lunghezza come numero intero positivo, è definita dalla formula della disposizione ripetuta:
+    
+    \begin{eq}
+n^n.
+    \end{eq}
+    x
+    Tuttavia, esistono particolari tipi di stringhe alle quali sembra importante attribuirgli una definizione nota:
+    + *Stringa nulla*: cioè una stringa dove i valori sono tutti nulli. Evolvendo questa stringa, si ottiene sempre lo stesso valore.
+    + *Stringa ordinata*: cioè una stringa riempita di con numeri da 0 fino ad un numero naturale. In Haskell, una stringa simile la si ottiene definendo una funzione come segue:
+      #+BEGIN_SRC haskell
+        ordinata :: Int -> [Int]
+        ordinata n = take n [0,1..]
+      #+END_SRC
+    + *Stringa Primordiale*: cioè la stringa dove tutti gli elementi sono nulli, e solo l'ultimo corrisponde all'unità. In Haskell, è possibile ottenerla definendo una funzione come segue:
+      #+BEGIN_SRC haskell
+      primordiale :: Int -> [Int]
+      primordiale n = take n-1 $ repeat 0 ++ 1
+      #+END_SRC
+** Congetture
+   

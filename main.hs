@@ -1,0 +1,2 @@
+-- Modular Strings, Riccardo Pratesi
+-- Script edited by Francesco Parisio
