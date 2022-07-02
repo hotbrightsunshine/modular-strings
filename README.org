@@ -9,7 +9,8 @@
 ** Descrizione
    Il concetto di stringa modulare è stato definito dal mio insegnante di matematica Riccardo Pratesi. Di seguito, descrivo brevemente le nozioni di base necessarie per comprendere a chi legge (e a me!) il problema.
   
-   Una *stringa modulare* è, dal punto di vista informatico, una lista di numeri interi non infinita e circolare. Questo vuol dire che l'elemento successivo all'ultimo è il primo, e il suo precedente è l'ultimo. In Haskell, è possibile gestire questa struttura con una lista normale, usando delle funzioni speciali per operarla.
+   Una *stringa modulare* è, dal punto di vista informatico, una lista di numeri interi non infinita e circolare. Questo vuol dire che l'elemento successivo all'ultimo è il primo, e il suo precedente è l'ultimo.
+   In Haskell, è possibile gestire questa struttura con una lista normale, usando delle funzioni speciali per operarla.
 
 *** Evoluzione della stringa
     La funzione principale che solleva diverse congetture, è l'/evoluzione/ di una stringa modulare. E' definita dalla funzione matematica
@@ -18,7 +19,8 @@
     /La funzione `mod` è stata usata in maniera infissa, seguendo lo stile sintattico di Haskell./
     #+end_quote
     
-Una stringa è quindi circolare, le operazioni da svolgere su di essa possono seguire dei /pattern/ periodici precisi. Il numero di passaggi che intercorrono tra una stringa e il ripetersi della stessa è chiamato periodo, e viene indicato con la lettera T maiuscola.
+Una stringa è quindi circolare, le operazioni da svolgere su di essa possono seguire dei /pattern/ periodici precisi. Il numero di passaggi che intercorrono tra una stringa e il ripetersi della stessa è chiamato periodo,
+e viene indicato con la lettera T maiuscola.
 
 *** Tipi di stringhe
     Il numero di tutte le stringhe possibili data la loro lunghezza come numero intero positivo, è definita dalla formula della disposizione ripetuta n^n.
@@ -34,5 +36,11 @@ Una stringa è quindi circolare, le operazioni da svolgere su di essa possono se
       primordiale :: Int -> [Int]
       primordiale n = take n-1 $ repeat 0 ++ 1
       #+END_SRC
+** Definizioni
+   Durante la lettura del documento fornitomi, mi sono permesso di riorganizzare le definizioni date nel problema, in quanto alcune sembravo sommarie ed inconsistenti. 
+   + *Periodo*: frequenza con la quale due stringe si ripetono nell'evoluzione di un'altra. Ad esempio, per tutte le computazioni di S, il periodo indica il numero di iterazioni eseguite tra una stringa A e la sua ripetizione. 
+   + *Pre-periodo*: numero di interazioni dopo le quali una stringa /collassa/, divergendo in una stringa nulla.
+   + ** 
 ** Congetture
+   
    
