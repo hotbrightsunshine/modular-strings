@@ -1,6 +1,8 @@
 -- Modular Strings, Riccardo Pratesi
 -- Script edited by Francesco Parisio
 
+module ModularStrings where
+
 zeros :: Int -> [Int]
 zeros n = replicate n 0
 
@@ -18,6 +20,7 @@ evolve (x:xs) modulo first =
     [compute x first modulo]
   else
     compute x (head xs) modulo : evolve xs modulo first
+evolve [] _ _ = [] 
 
 -- Returns an Infinite list of evolutions!
 evolution :: Modular -> Evolutions
